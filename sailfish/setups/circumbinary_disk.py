@@ -212,7 +212,9 @@ class CircumbinaryDisk(SetupBase):
         )
 
     def checkpoint_diagnostics(self, time):
-        return dict(point_masses=self.point_masses(time))
+        return dict(
+            point_masses=self.point_masses(time), diagnostics=self.diagnostics
+        )
 
 
 class KitpCodeComparison(SetupBase):
